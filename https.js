@@ -5,12 +5,12 @@
 // It's going to return the response
 
 // We'll break out the details of the request and response into separate files
-const request = require('./request');
-const response = require('./response');
+const {send} = require('./request');
+const {read} = require('./response');
 
 function makeRequest(url, data){
-  request.send(url, data);
-  return response.read();
+  send(url, data);
+  return read();
 }
 
 const responseData = makeRequest('https://google.com', 'hello');

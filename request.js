@@ -1,6 +1,7 @@
 // Our request module will include a function that allows us to send it to a url and pass in some data
 
 // This is https, which is an encrypted connection, so we'll need a function that will encrypt the data
+const REQUEST_TIMEOUT = 500;
 
 function encrypt(data){
   return "Encrypted data";
@@ -13,5 +14,6 @@ function send(url, data){
 }
 
 module.exports = {
+  REQUEST_TIMEOUT,
   send,
 }
